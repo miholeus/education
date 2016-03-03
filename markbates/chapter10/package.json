@@ -5,6 +5,7 @@
   "dependencies": {
     "express": "3.12.0",
     "jade": "*",
-    "ejs": "*"
+    "ejs": "*",
+    "mongoose": "*"
   }
 }
