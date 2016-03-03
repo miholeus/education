@@ -6,6 +6,7 @@
     "express": "3.12.0",
     "jade": "*",
     "ejs": "*",
-    "mongoose": "*"
+    "mongoose": "*",
+    "connect-assets": "*"
   }
 }
