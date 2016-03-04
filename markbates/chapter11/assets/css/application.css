@@ -10,3 +10,6 @@
 #todos #new_todo .todo_title {
     width: 758px;
 }
+#error-message {
+    display: none;
+}

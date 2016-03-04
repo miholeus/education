@@ -7,7 +7,7 @@ $ ->
         if e.keyCode is 13
             todo = {title: $(e.target).val()}
             if !todo.title? or todo.title.trim() is ""
-                alert "Title can't be blank"
+                $('#error-message').html("Title can't be blank").show()
             else
                 request = $.post "/api/todos", todo: todo
                 request.fail (response) =>
