@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Todos</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+            type="text/javascript"></script>
+        <script src= "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"
+            type="text/javascript"></script>
+            <%- js('application') %>
+            <%- js('templates') %>
+            <%- js('jquery/new_todo_form') %>
+            <%- js('jquery/style_by_state') %>
+            <%- js('jquery/delete_todo') %>
+            <%- js('jquery/update_todo') %>
+            <%- js('jquery/todo_item') %>
+            <%- js('jquery/retrieve_existing_todos') %>
+            <%- js('jquery/watch_todo_for_changes') %>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css"/>
+            <%- css('application') %>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Todo List</h1>
+            <div class="alert alert-danger" role="alert" id="error-message"></div>
+            <ul id="todos" class="list-group">
+                <li id="new_todo" class="list-group-item">
+                    <div class="clearfix">
+                        <div class="input-group">
+                            <span class="input-group-addon">New Todo</span>
+                            <input type="text" class="xlarge todo_title"
+                            size="50" placeholder="Enter your new Todo here..." value="">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
