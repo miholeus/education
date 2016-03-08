@@ -1,10 +1,7 @@
 #= require "backbone_sync"
 #= require "templates"
 #= require_tree "models"
+#= require_tree "views"
 $ ->
-  template = _.template(Templates.list_item_template)
-  todos = new Todos()
-  todos.fetch
-    success: ->
-      todos.forEach (todo) ->
-        $("#todos").append("<li class='list-group-item'>#{template(todo.toJSON())}</li>")
+  # Запуск приложения на основе Backbone.js
+  new TodoListView(collection: new Todos())
