@@ -4,8 +4,11 @@ class @Todo extends Backbone.Model
   paramRoot: 'todo'
   # Сконструировать URL, добавив в конец _id, если имеется
   url: ->
-    u = "/api/todos"
-    u += "#{@get("_id")}" unless @isNew
+    u = "/api/todos/"
+    u += "#{@get("_id")}" unless @isNew()
     return u
   isNew: ->
     !@get("_id")?
+  validate: (attrs) ->
+    if !attrs.title? or attrs.title.trim() is ""
+      return message: "Title can't be blank"
